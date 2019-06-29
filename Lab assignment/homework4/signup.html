@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>home</title>
+    
+<style>
+    #cont{ height:1000px; width:100%;left:0%; right:0%; top:0px; position:absolute; border:2px solid # 0FF; background-color: aqua;}
+    </style>
+<div id="cont">
+<center>
+<h1> Sign up form </h1>
+<table style="background-color:lightskyblue";>
+<form action="#" method="post" onsubmit="return validation();">
+<tr><td> Name</td><td>:<input id="name" type="text" placeholder="Your name" maxlength="25" required="required" /></td></tr>
+<tr><td> Id</td><td>:<input id="name" type="number" placeholder="" maxlength="25" required="required" /></td></tr>
+<tr><td> Email</td><td>:<input id="name" type="Email" placeholder="" maxlength="25" required="required" /></td></tr>
+<tr><td> Password</td><td>:<input id="name" type="password" placeholder="" maxlength="25" required="required" /></td></tr>
+<tr><td> Country</td>
+:<td> <select >
+<option value=""> </option>
+<option value="ben"> Bangladsh</option>
+<option value="ind"> India</option>
+<option value="usa"> America</option>
+</select>
+</td></tr>
+<tr><td> Gender:</td>
+<td>Male<input type="radio" value="m" /><br />
+Female<input type="radio" value="m" />
+<br />
+other<input type="radio" value="m" />
+<br /></td></tr>
+<tr> <td colspan="2">Your pic: <input type="file" /></td>
+</tr>
+<tr> <td><input type="submit" value="Signup" /></td> <td> <a href="login.html">Login</a></td></tr>
+
+</form>
+</table>
+    <div id= "eresult" style="color:red";></div>
+    <script type="text/javascript">
+    function validation(){
+        var Name =document.getElementById('Name').value;
+                var Id =document.getElementById('Id').value;
+                var Email =document.getElementById('Email').value;
+                var Password =document.getElementById('Password').value;
+         if(Name=''||Id=''||Email=''||Password ='')
+                {
+                    document.getElementById("eresult").innerHTML="All field required";
+                    return false;
+                }
+            else if(name.length<4){
+                 document.getElementById("eresult").innerHTML="name must be atleast 4 character ";
+           return false;
+            }
+                
+            else if(Id.length<8){
+                 document.getElementById("eresult").innerHTML="id must be at least 8 character";
+            return false;
+            }
+            else if(Email.length<20){
+                 document.getElementById("eresult").innerHTML="must be fill up the fild";
+            return false;
+            }
+              else if(Password.length<10){
+                 document.getElementById("eresult").innerHTML="password must be 10 character";
+            return false;
+            }
+        
+        else{
+                 return true;
+             }   
+            }
+    }
+    
+    </script>
+    
+</center>
+</div>
+
+
+  
+    
